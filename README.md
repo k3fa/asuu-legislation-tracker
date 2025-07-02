@@ -32,3 +32,14 @@ Visit `http://localhost:8000/docs` to view the API.
   uvicorn main:app --host 0.0.0.0 --port $PORT
   ```
 - Done 🎉
+
+### Docker
+Build the container image:
+```bash
+docker build -t asuu-legislation-tracker .
+```
+
+Run the container using your `.env` file:
+```bash
+docker run --env-file .env -p 8000:8000 asuu-legislation-tracker
+```
