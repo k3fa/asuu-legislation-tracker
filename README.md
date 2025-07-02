@@ -19,7 +19,7 @@ A FastAPI backend for tracking ASUU legislation. Includes endpoints to create, r
 
 4. Run the app:
    ```bash
-   uvicorn app.main:app --reload
+   uvicorn main:app --reload
    ```
 
 Visit `http://localhost:8000/docs` to view the API.
@@ -29,6 +29,6 @@ Visit `http://localhost:8000/docs` to view the API.
 - Add env variables from `.env.example`
 - Set start command:
   ```bash
-  uvicorn app.main:app --host 0.0.0.0 --port $PORT
+  uvicorn main:app --host 0.0.0.0 --port $PORT
   ```
 - Done 🎉
