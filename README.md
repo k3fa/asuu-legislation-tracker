@@ -1,6 +1,6 @@
 # ASUU Legislation Tracker Backend
 
-A FastAPI backend for tracking ASUU legislation. Includes endpoints to create, read, update, and delete legislation records.
+A FastAPI backend for tracking ASUU legislation. Includes endpoints to create, read, update, and delete legislation records. The `GET /legislation` endpoint now supports basic search and filtering.
 
 ## 🚀 Setup Instructions
 
@@ -23,6 +23,22 @@ A FastAPI backend for tracking ASUU legislation. Includes endpoints to create, r
    ```
 
 Visit `http://localhost:8000/docs` to view the API.
+
+### Filtering and Search
+
+The `GET /legislation` endpoint accepts optional query parameters:
+
+- `q` – search text matched against the title and summary
+- `type` – filter by legislation type (e.g. `Senate`, `Assembly`, `Joint`)
+- `status` – filter by current status
+
+There are also convenience routes for each type:
+
+- `GET /legislation/senate`
+- `GET /legislation/assembly`
+- `GET /legislation/joint`
+
+Each of these accepts the same `q` and `status` parameters.
 
 ### Railway Deployment
 - Link repo and provision PostgreSQL
