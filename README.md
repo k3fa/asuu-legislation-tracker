@@ -59,3 +59,23 @@ Run the container using your `.env` file:
 ```bash
 docker run --env-file .env -p 8000:8000 asuu-legislation-tracker
 ```
+
+## Next.js Frontend (Supabase & Vercel)
+A minimal frontend is provided in the `frontend/` directory. It uses Next.js with Supabase for data storage and Tailwind CSS for styling.
+
+### Setup
+1. Create a free Supabase project and add the table using `frontend/supabase_schema.sql`.
+2. Copy the Supabase URL and anon key into a `.env.local` file inside `frontend/`:
+   ```bash
+   NEXT_PUBLIC_SUPABASE_URL=your-url
+   NEXT_PUBLIC_SUPABASE_ANON_KEY=your-key
+   ```
+3. Install dependencies and run the development server:
+   ```bash
+   cd frontend
+   npm install
+   npm run dev
+   ```
+4. Deploy the frontend to Vercel and add the same environment variables.
+
+This example provides basic listing and creation of legislation items and can be extended to match additional Notion features.
