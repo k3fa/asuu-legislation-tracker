@@ -41,9 +41,9 @@ There are also convenience routes for each type:
 Each of these accepts the same `q` and `status` parameters.
 
 ### Railway Deployment
-- Link repo and provision PostgreSQL
-- Add env variables from `.env.example`
-- Set start command:
+- Link the repo and provision a PostgreSQL database.
+- In the project settings add a `DATABASE_URL` variable with the connection string from the Railway database. This replaces the local values in `.env.example`.
+- Set the start command:
   ```bash
   uvicorn main:app --host 0.0.0.0 --port $PORT
   ```
