@@ -59,6 +59,12 @@ Run the container using your `.env` file:
 ```bash
 docker run --env-file .env -p 8000:8000 asuu-legislation-tracker
 ```
+## Streamlit App
+A basic Streamlit interface is provided in `streamlit_app.py`.
+Run it locally after setting up your database:
+```bash
+streamlit run streamlit_app.py
+```
 
 ## Next.js Frontend (Supabase & Vercel)
 A minimal frontend is provided in the `frontend/` directory. It uses Next.js with Supabase for data storage and Tailwind CSS for styling.
